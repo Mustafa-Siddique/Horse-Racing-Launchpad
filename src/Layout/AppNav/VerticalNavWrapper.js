@@ -9,6 +9,7 @@ import {
   FormsNav,
   WidgetsNav,
   ChartsNav,
+  LaunchpadList,
 } from "./NavItems";
 
 class Nav extends Component {
@@ -63,6 +64,13 @@ class Nav extends Component {
         {/* <h5 className="app-sidebar__heading">Charts</h5> */}
         <MetisMenu
           content={ChartsNav}
+          activeLinkFromLocation
+          className="vertical-nav-menu"
+          iconNamePrefix=""
+          classNameStateIcon="pe-7s-angle-down"
+        />
+        <MetisMenu
+          content={LaunchpadList}
           activeLinkFromLocation
           className="vertical-nav-menu"
           iconNamePrefix=""

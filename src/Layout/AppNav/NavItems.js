@@ -116,3 +116,10 @@ export const ChartsNav = [
         to: '#/charts/chartjs',
     },
 ];
+export const LaunchpadList = [
+    {
+        icon: 'pe-7s-global',
+        label: 'Launchpad Lists',
+        to: '#/launchpad',
+    },
+];

@@ -6,6 +6,7 @@ import { ToastContainer } from "react-toastify";
 const Dashboards = lazy(() => import("../../DemoPages/Dashboards"));
 
 const Widgets = lazy(() => import("../../DemoPages/Widgets"));
+const _LaunchpadList = lazy(() => import("../../DemoPages/LaunchpadList"));
 const Elements = lazy(() => import("../../DemoPages/Elements"));
 const Components = lazy(() => import("../../DemoPages/Components"));
 const Charts = lazy(() => import("../../DemoPages/Charts"));
@@ -15,6 +16,27 @@ const Tables = lazy(() => import("../../DemoPages/Tables"));
 const AppMain = () => {
   return (
     <Fragment>
+      {/* Launchpad Lists */}
+
+      <Suspense
+        fallback={
+          <div className="loader-container">
+            <div className="loader-container-inner">
+              <h6 className="mt-3">
+                Please wait while we load all the Launchpad Lists
+                <small>
+                  Because this is a demonstration we load at once all the
+                  Dashboard Widgets. This wouldn't happen in a real
+                  live app!
+                </small>
+              </h6>
+            </div>
+          </div>
+        }
+      >
+        <Route path="/launchpad" component={_LaunchpadList} />
+      </Suspense>
+
       {/* Components */}
 
       <Suspense
@@ -22,10 +44,10 @@ const AppMain = () => {
           <div className="loader-container">
             <div className="loader-container-inner">
               <h6 className="mt-5">
-                Please wait while we load all the Components examples
+                Please wait while we load all the Components
                 <small>
                   Because this is a demonstration we load at once all the
-                  Components examples. This wouldn't happen in a real live app!
+                  Components. This wouldn't happen in a real live app!
                 </small>
               </h6>
             </div>
@@ -42,10 +64,10 @@ const AppMain = () => {
           <div className="loader-container">
             <div className="loader-container-inner">
               <h6 className="mt-5">
-                Please wait while we load all the Forms examples
+                Please wait while we load all the Forms
                 <small>
                   Because this is a demonstration we load at once all the Forms
-                  examples. This wouldn't happen in a real live app!
+                 . This wouldn't happen in a real live app!
                 </small>
               </h6>
             </div>
@@ -62,10 +84,10 @@ const AppMain = () => {
           <div className="loader-container">
             <div className="loader-container-inner">
               <h6 className="mt-3">
-                Please wait while we load all the Charts examples
+                Please wait while we load all the Charts
                 <small>
                   Because this is a demonstration we load at once all the Charts
-                  examples. This wouldn't happen in a real live app!
+                 . This wouldn't happen in a real live app!
                 </small>
               </h6>
             </div>
@@ -82,10 +104,10 @@ const AppMain = () => {
           <div className="loader-container">
             <div className="loader-container-inner">
               <h6 className="mt-5">
-                Please wait while we load all the Tables examples
+                Please wait while we load all the Tables
                 <small>
                   Because this is a demonstration we load at once all the Tables
-                  examples. This wouldn't happen in a real live app!
+                 . This wouldn't happen in a real live app!
                 </small>
               </h6>
             </div>
@@ -102,10 +124,10 @@ const AppMain = () => {
           <div className="loader-container">
             <div className="loader-container-inner">
               <h6 className="mt-3">
-                Please wait while we load all the Elements examples
+                Please wait while we load all the Elements
                 <small>
                   Because this is a demonstration we load at once all the
-                  Elements examples. This wouldn't happen in a real live app!
+                  Elements. This wouldn't happen in a real live app!
                 </small>
               </h6>
             </div>
@@ -122,10 +144,10 @@ const AppMain = () => {
           <div className="loader-container">
             <div className="loader-container-inner">
               <h6 className="mt-3">
-                Please wait while we load all the Dashboard Widgets examples
+                Please wait while we load all the Dashboard Widgets
                 <small>
                   Because this is a demonstration we load at once all the
-                  Dashboard Widgets examples. This wouldn't happen in a real
+                  Dashboard Widgets. This wouldn't happen in a real
                   live app!
                 </small>
               </h6>
@@ -143,10 +165,10 @@ const AppMain = () => {
           <div className="loader-container">
             <div className="loader-container-inner">
               <h6 className="mt-3">
-                Please wait while we load all the Dashboards examples
+                Please wait while we load all the Dashboards
                 <small>
                   Because this is a demonstration, we load at once all the
-                  Dashboards examples. This wouldn't happen in a real live app!
+                  Dashboards. This wouldn't happen in a real live app!
                 </small>
               </h6>
             </div>

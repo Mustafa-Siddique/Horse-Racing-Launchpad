@@ -1,24 +1,23 @@
 import React, { Fragment } from "react";
 import { Route } from "react-router-dom";
 
-// DASHBOARDS
-
-import BasicDashboard from "./Basic/";
+// Cards
+import LaunchCards from "./LaunchCards";
 
 // Layout
-
 import AppHeader from "../../Layout/AppHeader/";
 import AppSidebar from "../../Layout/AppSidebar/";
 import AppFooter from "../../Layout/AppFooter/";
 
-const Dashboards = ({ match }) => (
+const _LaunchpadLists = ({ match }) => (
   <Fragment>
     <AppHeader />
     <div className="app-main">
       <AppSidebar />
       <div className="app-main__outer">
         <div className="app-main__inner">
-        <Route path={`${match.url}/`} component={BasicDashboard}/>
+          {/* _LaunchpadLists */}
+          <Route path={`${match.url}/`} component={LaunchCards} />
         </div>
         <AppFooter />
       </div>
@@ -26,4 +25,4 @@ const Dashboards = ({ match }) => (
   </Fragment>
 );
 
-export default Dashboards;
+export default _LaunchpadLists;
