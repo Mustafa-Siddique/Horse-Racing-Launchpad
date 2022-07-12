@@ -10,6 +10,7 @@ import {
   WidgetsNav,
   ChartsNav,
   LaunchpadList,
+  Leaderboard
 } from "./NavItems";
 
 class Nav extends Component {
@@ -71,6 +72,13 @@ class Nav extends Component {
         />
         <MetisMenu
           content={LaunchpadList}
+          activeLinkFromLocation
+          className="vertical-nav-menu"
+          iconNamePrefix=""
+          classNameStateIcon="pe-7s-angle-down"
+        />
+        <MetisMenu
+          content={Leaderboard}
           activeLinkFromLocation
           className="vertical-nav-menu"
           iconNamePrefix=""

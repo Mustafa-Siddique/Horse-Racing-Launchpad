@@ -28433,3 +28433,25 @@ body .card.mb-3 {
   font-weight: 600;
   margin-bottom: 0;
 }
+.all-launchpad .search{
+  border-radius: 25px;
+  height: 35px;
+  width: 100%;
+  padding-left: 10px;
+}
+.all-launchpad .search:hover, .all-launchpad .search:focus-visible{
+  border-color: #FD858C !important;
+}
+#launch-card-self{
+  border-radius: 25px;
+}
+#launch-card-self #avatar{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#launch-card-self #avatar img{
+  height: 100%;
+  width: 100%;
+}

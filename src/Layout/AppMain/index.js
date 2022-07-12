@@ -6,12 +6,13 @@ import { ToastContainer } from "react-toastify";
 const Dashboards = lazy(() => import("../../DemoPages/Dashboards"));
 
 const Widgets = lazy(() => import("../../DemoPages/Widgets"));
-const _LaunchpadList = lazy(() => import("../../DemoPages/LaunchpadList"));
 const Elements = lazy(() => import("../../DemoPages/Elements"));
 const Components = lazy(() => import("../../DemoPages/Components"));
 const Charts = lazy(() => import("../../DemoPages/Charts"));
 const Forms = lazy(() => import("../../DemoPages/Forms"));
 const Tables = lazy(() => import("../../DemoPages/Tables"));
+const _LaunchpadList = lazy(() => import("../../DemoPages/LaunchpadList"));
+const Leaderboard = lazy(() => import("../../DemoPages/Leaderboard"))
 
 const AppMain = () => {
   return (
@@ -97,6 +98,26 @@ const AppMain = () => {
         <Route path="/charts" component={Charts} />
       </Suspense>
 
+      {/* Leaderboard */}
+
+      <Suspense
+        fallback={
+          <div className="loader-container">
+            <div className="loader-container-inner">
+              <h6 className="mt-3">
+                Please wait while we load all the Charts
+                <small>
+                  Because this is a demonstration we load at once all the Charts
+                 . This wouldn't happen in a real live app!
+                </small>
+              </h6>
+            </div>
+          </div>
+        }
+      >
+        <Route path="/leaderboard" component={Leaderboard} />
+      </Suspense>
+
       {/* Tables */}
 
       <Suspense
@@ -175,7 +196,7 @@ const AppMain = () => {
           </div>
         }
       >
-        <Route path="/" component={Dashboards} />
+        <Route exact path="/" component={Dashboards} />
       </Suspense>
 
       <ToastContainer />
