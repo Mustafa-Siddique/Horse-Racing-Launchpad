@@ -15,6 +15,7 @@ import {
 import classnames from "classnames";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function LaunchCards() {
   const [activeTab, setActiveTab] = useState("1");
@@ -127,7 +128,7 @@ export default function LaunchCards() {
                       <span>Sale Starts In:</span><br />
                       <span className="fw-bold">01:08:21:28</span>
                     </div>
-                    <div className="btn btn-primary">View Details</div>
+                    <Link to="/launchpad/detailpage" className="btn btn-primary">View Details</Link>
                   </div>
                 </div>
               </div>

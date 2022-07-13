@@ -28442,6 +28442,9 @@ body .card.mb-3 {
 .all-launchpad .search:hover, .all-launchpad .search:focus-visible{
   border-color: #FD858C !important;
 }
+.all-launchpad .row{
+  --bs-gutter-x: 0 !important;
+}
 #launch-card-self{
   border-radius: 25px;
 }
@@ -28453,5 +28456,11 @@ body .card.mb-3 {
 }
 #launch-card-self #avatar img{
   height: 100%;
+  width: 100%;
+}
+.lauch-detail-main .col-xl-8 .detail-socials a{
+  width: 40px;
+}
+.lauch-detail-main .col-xl-4 img{
   width: 100%;
 }
