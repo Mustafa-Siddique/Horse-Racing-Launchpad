@@ -2,6 +2,7 @@ import { Route, Redirect } from "react-router-dom";
 import React, { Suspense, lazy, Fragment } from "react";
 
 import { ToastContainer } from "react-toastify";
+import Create from "../../DemoPages/Create";
 
 const Dashboards = lazy(() => import("../../DemoPages/Dashboards"));
 
@@ -17,6 +18,27 @@ const Leaderboard = lazy(() => import("../../DemoPages/Leaderboard"))
 const AppMain = () => {
   return (
     <Fragment>
+    {/* Launchpad Lists */}
+
+    <Suspense
+      fallback={
+        <div className="loader-container">
+          <div className="loader-container-inner">
+            <h6 className="mt-3">
+              Please wait while we load the form
+              <small>
+                Because this is a demonstration we load at once all the
+                Dashboard Widgets. This wouldn't happen in a real
+                live app!
+              </small>
+            </h6>
+          </div>
+        </div>
+      }
+    >
+      <Route path="/create" component={Create} />
+    </Suspense>
+
       {/* Launchpad Lists */}
 
       <Suspense

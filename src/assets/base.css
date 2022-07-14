@@ -28458,9 +28458,9 @@ body .card.mb-3 {
   height: 100%;
   width: 100%;
 }
-.lauch-detail-main .col-xl-8 .detail-socials a{
+.lauch-detail-main .col-md-8 .detail-socials a{
   width: 40px;
 }
-.lauch-detail-main .col-xl-4 img{
+.lauch-detail-main .col-md-4 img{
   width: 100%;
 }

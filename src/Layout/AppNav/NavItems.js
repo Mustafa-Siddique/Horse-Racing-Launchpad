@@ -129,3 +129,10 @@ export const Leaderboard = [
     to: "#/leaderboard",
   },
 ];
+export const Create = [
+  {
+    icon: "pe-7s-plus",
+    label: "Create",
+    to: "#/create",
+  },
+];
