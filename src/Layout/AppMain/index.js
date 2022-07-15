@@ -18,14 +18,14 @@ const Leaderboard = lazy(() => import("../../DemoPages/Leaderboard"))
 const AppMain = () => {
   return (
     <Fragment>
-    {/* Launchpad Lists */}
+    {/* Create Form */}
 
     <Suspense
       fallback={
         <div className="loader-container">
           <div className="loader-container-inner">
             <h6 className="mt-3">
-              Please wait while we load the form
+              Please wait while we load the Launchpad
               <small>
                 Because this is a demonstration we load at once all the
                 Dashboard Widgets. This wouldn't happen in a real
